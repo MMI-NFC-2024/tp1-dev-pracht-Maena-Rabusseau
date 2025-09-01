@@ -4,6 +4,12 @@ import { JSDOM } from "jsdom";
 const { options } = Astro.props;
 
 const plot = Plot.plot({ ...options, document: new JSDOM("").window.document });
+
+Plot.dot(penguins, {x: "culmen_length_mm", y: "culmen_depth_mm"}).plot()
 ---
 
+
+
 <div set:html={plot.outerHTML} />
+
+

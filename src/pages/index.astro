@@ -1,6 +1,15 @@
 ---
+	
+import * as Plot from "@observablehq/plot";
+import { JSDOM } from "jsdom";
+const { options } = Astro.props;
 
+const plot = Plot.plot({ ...options, document: new JSDOM("").window.document });
+
+Plot.dot(penguins, {x: "culmen_length_mm", y: "culmen_depth_mm"}).plot()
 ---
+
+
 
 <html lang="en">
 	<head>
@@ -12,5 +21,18 @@
 	</head>
 	<body>
 		<h1>Astro</h1>
+
+
+
+
+
+
+
+	
+
+
+<div set:html={plot.outerHTML} />
+
+
 	</body>
 </html>
