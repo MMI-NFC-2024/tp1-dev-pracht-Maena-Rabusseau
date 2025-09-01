@@ -50,6 +50,30 @@
 
 
 
+	<!-- <PlotFigure
+      options={{
+        marks: [
+ Plot.plot({
+  grid: true,
+  x: {
+    label: "Daily change (%) →",
+    tickFormat: "+f",
+    percent: true
+  },
+  y: {
+    type: "log",
+    label: "↑ Daily trading volume"
+  },
+  marks: [
+    Plot.ruleX([0]),
+    Plot.dot(aapl, {x: (d) => (d.Close - d.Open) / d.Open, y: "Volume", r: "Volume"})
+  ]
+})
+        ]
+      }}
+    /> -->
+
+
 
 	</body>
 </html>
