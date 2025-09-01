@@ -16,18 +16,28 @@
 		<title>Astro</title>
 	</head>
 	<body>
-		<h1>Astro</h1>
+		<h1> Exemple avec les penguins </h1>	
+
+
+<!-- // schéma 1 //  --> 		
+
+<PlotFigure
+      options={{
+        marks: [
+         Plot.dot(penguins, {x: "culmen_length_mm", y: "culmen_depth_mm"})
+        ]
+      }}
+    />
 
 
 
 
 
-
-
-	
 
 
 
 
 	</body>
 </html>
+
+
